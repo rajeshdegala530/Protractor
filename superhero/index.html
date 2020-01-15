@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css">
+
+  <title>Superhero Roster</title>
+</head>
+
+<body>
+  <div id="overlay">
+    <div class="row justify-content-md-center">
+      <h1 id="login-title">Welcome.Please enter your Login</h1>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-6">
+        <form id="form-login">
+          <div class="form-group">
+            <label for="loginemail">Email address</label>
+            <input type="email" class="form-control" id="loginemail" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="loginpassword">Password</label>
+            <input type="password" class="form-control" id="loginpassword">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="rememberme">
+            <label class="form-check-label" for="rememberme">Remember Login</label>
+          </div>
+          <button type="submit" class="btn btn-primary" id="login-submit">Submit</button>
+        </form>
+
+          <div class="alert alert-danger hide" role="alert" id="login-alert">
+            Email and Password are required.
+          </div>
+         
+      </div>
+    </div>
+  </div>
+  
+    
+
+ 
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background:rgba(114, 136, 143, 0.705);">
+          <a class="navbar-brand" href="#">Heros</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://facebook.com/">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Hero Facts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1">Wolverine</a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal2">Spider-Man</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="logout()">Logout</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="search-form">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                id="search-box">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><b>Search</b></button>
+            </form>
+          </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="wolverinemodaltitle">Wolverine Facts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Wolverine made his first comic book appearance in 1974.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="spidermanmodaltitle">Spider-Man Facts</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Spider-Man first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver
+                Age of Comic Books.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row justify-content-md-center">
+        <h1>Superhero Roster</h1>
+      </div>
+      <div class="row justify-content-md-center bg-light">
+        <img src="./images/superhero.png" alt="Superhero Image">
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-8">
+          <p>Imagine that you are tasked with building a team of superheros to save the world. We have given you a few
+            heros to start with. Add as many as heros as you would like to round out your dream team
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-md-center ">
+        <h3>
+          Build your superhero Roster
+        </h3>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-9">
+          <ul class="list-group" id="hero-list">
+            <li class="list-group-item">Wolverine</li>
+            <li class="list-group-item">spider-Man</li>
+            <li class="list-group-item">Dead Pool</li>
+            <li class="list-group-item">Iron Man</li>
+            <li class="list-group-item">Thor</li>
+          </ul>
+          <hr>
+          <div class="alert alert-danger hide" role="alert" id="addheroalert">
+            Please Enter a Superhero
+          </div>
+          <form id="addhero-form">
+            <div class="form-group">
+              <label for="HeroInputlbl">Add A Super Hero</label>
+              <input type="text" class="form-control" id="heroInput" placeholder="Enter Hero">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-md-center">
+        <div class="col-9">
+          <h4>Vote for your favorite Superhero movie</h4>
+
+          <div class="alert alert-primary hide" role="alert" id="vote-alert">
+            Thanks for Voting!!
+          </div>
+
+          <form id="vote-form" style="background:rgba(114, 136, 143, 0.705);">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio1" value="option1"
+                checked>
+              <label class="form-check-label" for="heroMovieRadio1">
+                X-Men
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio2" value="option2">
+              <label class="form-check-label" for="heroMovieRadio2">
+                Avengers
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio3" value="option3">
+              <label class="form-check-label" for="heroMovieRadio3">
+                Deadpool
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio4" value="option3">
+              <label class="form-check-label" for="heroMovieRadio4">
+                Spider-Man Homecoming
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio5" value="option3">
+              <label class="form-check-label" for="heroMovieRadio5">
+                Iron Man
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <br>
+          <br>
+
+
+
+          <table class="table" style="background:rgba(114, 136, 143, 0.705);">
+            <thead>
+              <tr>
+                <th scope="col">Movie</th>
+                <th scope="col">Votes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="movieName1">X-Men</td>
+                <td id="movieVotes1">10</td>
+              </tr>
+              <tr>
+                <td id="movieName2">Avengers</td>
+                <td id="movieVotes2">5</td>
+              </tr>
+              <tr>
+                <td id="movieName3">Deadpool</td>
+                <td id="movieVotes3">22</td>
+              </tr>
+              <tr>
+                <td id="movieName4">Spider-Man Homecoming</td>
+                <td id="movieVotes4">12</td>
+              </tr>
+              <tr>
+                <td id="movieName5">Iron Man</td>
+                <td id="movieVotes5">1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <script src="./js/script.js">
+    </script>
+</body>
+
+</html>
